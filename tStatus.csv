@@ -1,0 +1,5 @@
+StatusID,StatusCode
+1,"Not Started"
+2,"In Progress"
+3,"On Hold"
+4,Completed

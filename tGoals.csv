@@ -1,0 +1,12 @@
+GoalID,GoalSummary,GoalDescription,GoalProgress,GoalStatusID
+2,"My Project","This is a DBMS project",0,1
+3,"My Projects","This is a DBMS project",0,1
+4,"My Homeworks",Assignments,10,1
+5,"My Paintings","My Painitng works",40,1
+6,"My Python courses","Python courses",0,1
+7,"My Books","Books that I wanted to complete",50,2
+8,"My Shoppings","Shopping for the month",0,1
+9,"Bucket List","My bucket list",0,1
+10,"Exam plan","My exam preparation plan",0,1
+11,"test goal 9","Goal test desc",0,1
+12,"test goal 10","Goal test desc",0,1

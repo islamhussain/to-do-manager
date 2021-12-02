@@ -230,30 +230,55 @@ BEGIN
 	end if;
 end$$
 delimiter ;
-
+insert into tStatus (StatusCode) values('Not Started'),('In Progress'),('On Hold'), ('Completed');
 
 
 /*
 Data part
 -- Inserting users
 insert into tUsers (UserName, password) values('test', 'test'),('test2', 'test2');
-
--- Inserting staus codes
-insert into tStatus (StatusCode) values('Not Started'),('In Progress'),('On Hold'), ('Completed');
+insert into tUsers (UserName, password) values('test3', 'test3'),('test4', 'test4');
+insert into tUsers (UserName, password) values('test5', 'test5'),('test6', 'test6');
+insert into tUsers (UserName, password) values('test8', 'test8'),('test9', 'test9');
 
 -- Inserting Goals
-call insert_goals('test', 'test', 'My Project', 'This is a DBMS project', 0, 'Not Started')
+call insert_goals('test', 'test', 'My Projects', 'This is a DBMS project', 0, 'Not Started');
+call insert_goals('test', 'test', 'My Homeworks', 'Assignments', 10, 'Not Started');
+call insert_goals('test', 'test', 'My Paintings', 'My Painitng works', 40, 'Not Started');
+call insert_goals('test', 'test', 'My Python courses', 'Python courses', 0, 'Not Started');
+call insert_goals('test', 'test', 'My Books', 'Books that I wanted to complete', 50, 'In Progress');
+call insert_goals('test', 'test', 'My Shoppings', 'Shopping for the month', 0, 'Not Started');
+call insert_goals('test', 'test', 'Bucket List', 'My bucket list', 0, 'Not Started');
+call insert_goals('test', 'test', 'Exam plan', 'My exam preparation plan', 0, 'Not Started');
+call insert_goals('test', 'test', 'test goal 9', 'Goal test desc', 0, 'Not Started');
+call insert_goals('test', 'test', 'test goal 10', 'Goal test desc', 0, 'Not Started');
 
 --Inserting Tasks
-call insert_tasks('test', 'test', 'PPT', 'This task is about creating PPT for the project', 0, 'Not Started', 1)
+call insert_tasks('test', 'test', 'PPT', 'This task is about creating PPT for the project', 0, 'Not Started', 1);
+call insert_tasks('test', 'test', 'DOC', 'This task is about creating PPT for the project', 0, 'Not Started', 1);
+call insert_tasks('test2', 'test2', 'Code Impl', 'This task is about code impl', 0, 'Not Started', 1);
+call insert_tasks('test', 'test', 'DEMO', 'This task is about demo', 0, 'Not Started', 1);
+call insert_tasks('test', 'test', 'Alchemist', 'This task is about demo', 0, 'Not Started', 5);
+call insert_tasks('test', 'test', 'test task 1', 'test desc', 0, 'Not Started', 7);
+call insert_tasks('test', 'test', 'test task 1', 'test desc', 0, 'Not Started', 8);
+call insert_tasks('test', 'test', 'test task 1', 'test desc', 0, 'Not Started', 9);
+call insert_tasks('test', 'test', 'test task 1', 'test desc', 0, 'Not Started', 10);
+call insert_tasks('test', 'test', 'test task 1', 'test desc', 0, 'Not Started', 4);
+
 
 
 
 
 --Invoking -ve cases
 --Querying different tables and functions
-select StatusID  from tStatus s where s.StatusCode = 'Not Started';
-select * from tGoals
-select * from tUserToGoalMap
+use todomanager
+select *  from tStatus;
+select * from tGoals;
+select * from tUserToGoalMap;
+select * from tTasks;
+select * from tUserToTaskMap;
+select * from tGoalToTaskMap;
+select * from tUsers;
+
 select validateuser('test', 'test') as validuser;
 */
